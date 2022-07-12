@@ -34,7 +34,11 @@ class Solution:
         # return type: list or bool
 
        # TODO: Write code below to return a list with the solution to the prompt
-        pass
+        for num1 in range(len(ary)):
+            for num2 in range(num1,ary): 
+                if (num1+num2) == target:
+                    return [num1,num2]
+        return False        
 
 def main():
     array = input().split(" ")
