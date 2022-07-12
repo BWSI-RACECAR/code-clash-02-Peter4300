@@ -32,12 +32,10 @@ class Solution:
         # type ary: list
         # type target: int
         # return type: list or bool
-
-       # TODO: Write code below to return a list with the solution to the prompt
-        for num1 in range(len(ary)):
-            for num2 in range(num1,ary): 
-                if (num1+num2) == target:
-                    return [num1,num2]
+        for x in range(len(ary)):
+            for y in range(x+1,len(ary)): 
+                if (ary[x]+ary[y]) == target:
+                    return [x,y]
         return False        
 
 def main():
